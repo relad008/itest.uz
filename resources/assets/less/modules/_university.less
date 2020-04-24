@@ -1,0 +1,310 @@
+.university {
+	padding: 25px 0 @layout-space-sm;
+	overflow: hidden;
+	position: relative;
+
+	& .bg-img-group {
+		height: 800px;
+	}
+
+	&__card {
+		.blocks-shadow;
+		.rounded;
+		padding: 40px 30px 30px;
+		background-color: #fff;
+		width: 540px;
+		margin: 0 auto 125px;
+	}
+
+	&__list {
+		background-color: #fff;
+		.rounded;
+		.blocks-shadow;
+		overflow: hidden;
+
+		&--nav {
+			& .university__list-link {
+				position: relative;
+				padding: 10px 30px 10px 35px;
+
+				&:before {
+					content: "";
+					position: absolute;
+					left: 15px;
+					.radius(100%);
+					.centered-y;
+					border: 1px solid @color-gray;
+					.size(9px, 9px);
+					background-color: transparent;
+				}
+
+				&.active {
+					background-color: @color-row-gray;
+
+					&:before {
+						background-color: @color-brand;
+						border: none;
+					}
+				}
+			}
+		}
+
+		&-link {
+			display: block;
+			padding: 15px 30px;
+			border-bottom: 1px solid @color-gray;
+			font-size: 14px;
+			.transition(background .2s ease);
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			&:hover {
+				background-color: @color-row-gray;
+			}
+		}
+	}
+
+	&__wrap {
+		padding: @layout-space-xs 0;
+		.clr-block;
+
+		&-thumb {
+			float: left;
+			width: 275px;
+			.rounded;
+			margin-right: 30px;
+			.box-shadow(5px, 5px, 40px, rgba(0,0,0,0.3));
+		}
+
+		&-inner {
+			padding-top: 15px;
+		}
+
+		&-item {
+
+			& i {
+				margin-right: 15px;
+				font-size: 20px;
+
+				&.icon-location {
+					font-size: 26px;
+				}
+			}
+
+			& span {
+				vertical-align: top;
+			}
+		}
+	}
+
+	&__info {
+		display: block;
+		padding-left: 20px;
+		border-left: 3px solid @color-brand;
+		margin-left: 305px;
+		padding-top: 5px;
+
+		&-item {
+			font-size: 14px;
+
+			& p:first-child {
+				float: left;
+				width: 300px;
+			}
+		}
+	}
+
+	&__controls {
+		margin-bottom: 20px;
+
+		&-btn {
+			width: 150px;
+			margin-left: 10px;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+	}
+
+	&__table-wrap {
+		.blocks-shadow;
+		.rounded;
+		.bg-white;
+		overflow: hidden;
+	}
+
+	&__table {
+
+		& thead td {
+			.font-medium;
+		}
+
+		&-col {
+			width: 10%;
+			text-align: center;
+
+			&-code {
+				text-align: left;
+				padding-left: 3%;
+				width: 10%;
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.university {
+
+		& .bg-img-group {
+			height: 1000px;
+		}
+
+		&__advantages {
+			margin-bottom: 40px;
+		}
+
+		&__table-wrap {
+			overflow-x: scroll;
+		}
+
+		&__table {
+			width: 940px!important;
+		}
+	}
+}
+
+@media (max-width: @screen-sm) {
+	.university {
+
+		&__advantages {
+			text-align: center;
+		}
+
+		&__list--nav {
+			margin-bottom: 30px;
+
+			& .university__list-link {
+				float: left;
+				width: 25%;
+				white-space: nowrap;
+
+				&:last-child {
+					border-bottom: 1px solid @color-gray;
+				}
+			}
+		}
+
+		&__wrap {
+
+			&-thumb {
+				margin: 0 auto 15px;
+				display: block;
+				float: none;
+			}
+
+			&-item {
+				text-align: center;
+			}
+		}
+
+		&__info {
+			margin-left: 0;
+
+			&-item p:last-child {
+				text-align: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.university {
+
+		&__card {
+			width: 100%;
+		}
+
+		&__list--nav {
+
+			& .university__list-link {
+				width: 33.333%;
+			}
+		}
+
+		&__info {
+
+			&-item {
+				.clr-block;
+				margin-bottom: 10px;
+
+				& p:first-child {
+					width: 200px;
+				}
+			}
+		}
+
+		&__controls {
+			text-align: center;
+			margin-bottom: 15px;
+
+			& span {
+				display: block;
+				margin-bottom: 20px;
+			}
+
+			&-btn {
+				margin-bottom: 10px;
+
+				&:nth-child(2) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.university {
+
+		&__list--nav {
+
+			& .university__list-link {
+				width: 50%;
+			}
+		}
+
+		&__info {
+
+			&-item {
+				
+				& p:first-child {
+					width: 150px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.university {
+
+		&__list--nav {
+
+			& .university__list-link {
+				width: 100%;
+			}
+		}
+
+		&__controls {
+
+			&-btn {
+
+				&:nth-child(2) {
+					margin-right: 0;
+					margin-left: 0;
+				}
+			}
+		}
+	}
+}

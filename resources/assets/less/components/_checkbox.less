@@ -1,0 +1,61 @@
+/*
+ * UI Checkbox
+ *
+ * Create UI Checkbox using this module
+ */
+
+.checkbox{
+	display: inline-block;
+	cursor: pointer;
+
+	/* Prevent user from selecting the UI element */
+	.user-select(none);
+	
+	
+	input[type="checkbox"]{
+
+		/* Hide the default checkbox */
+		display: none;
+		
+		/* Apply styles to your custom checkbox 
+		   when default checkbox is checked */
+		&:checked{
+			+ span{
+				&:before{
+					background-color: @color-brand;
+					border-color: transparent;
+				}
+			}
+		}
+	}
+	
+	/* Here goes your custom checkbox styles */
+	span {
+		// Here goes checkbox label styles ...
+		font-size: 12px;
+		position: relative;
+		.font-regular;
+
+		/* Box */
+		&:before{
+			content: @icon-check;
+			font-family: @icomoon-font-family;
+			color: #fff;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: @layout-md;
+			position: relative;
+			top: -2px;
+			font-size: 10px;
+			padding: 1px 2px 2px;
+			.size(16px, 16px);
+			.radius(4px);
+			background-color: #fff;
+			border: 1px solid @color-gray;
+		}
+	}
+
+	&:disabled{
+		
+	}
+}

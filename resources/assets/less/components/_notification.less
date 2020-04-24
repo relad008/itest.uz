@@ -1,0 +1,21 @@
+.notification {
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .1);
+	margin: 25px 5px;
+	.radius(4px);
+	position: relative;
+
+	&:after {
+		content: @icon-cancel;
+		font-family: @icomoon-font-family;
+		font-size: 10px;
+		color: #fff;
+		position: absolute;
+		.centered-y;
+		right: 9px;
+		cursor: pointer;
+	}
+
+	&-content {
+		padding: 11px 25px 10px 15px;
+	}
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="98px" viewBox="0 0 88 98" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M283.86264,139.40485 L291.61341,176.807713 C292.397871,180.593281 289.964992,184.298021 286.179424,185.082482 C285.244393,185.276243 284.279606,185.276649 283.344412,185.083675 L245.862079,177.349338 C242.075852,176.568064 239.639856,172.865374 240.42113,169.079146 C240.697986,167.737438 241.362462,166.50646 242.332208,165.53877 L272.063771,135.870244 C274.80034,133.139477 279.232493,133.14418 281.96326,135.88075 C282.92596,136.845495 283.586088,138.070293 283.86264,139.40485 Z" id="path-1"></path>
+        <filter x="-66.0%" y="-62.3%" width="232.1%" height="232.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="11" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.206260629   0 0 0 0 0.094393699   0 0 0 0 0.094393699  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home-page" transform="translate(-965.000000, -281.000000)">
+            <g id="Video-Frame" transform="translate(163.000000, 169.000000)">
+                <g id="Panel-4" transform="translate(569.000000, 0.000000)">
+                    <g id="Video" transform="translate(0.173191, 0.607824)">
+                        <g id="Rectangle-4" transform="translate(266.017870, 159.526673) rotate(-45.000000) translate(-266.017870, -159.526673) ">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

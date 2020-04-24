@@ -1,0 +1,249 @@
+// Mixins
+// --------------------------------------------------
+
+// Utilities
+@import "mixins/hide-text.less";
+@import "mixins/opacity.less";
+@import "mixins/image.less";
+@import "mixins/labels.less";
+@import "mixins/reset-filter.less";
+@import "mixins/resize.less";
+@import "mixins/responsive-visibility.less";
+@import "mixins/size.less";
+@import "mixins/tab-focus.less";
+@import "mixins/reset-text.less";
+@import "mixins/text-emphasis.less";
+@import "mixins/text-overflow.less";
+@import "mixins/vendor-prefixes.less";
+
+// Components
+@import "mixins/alerts.less";
+@import "mixins/buttons.less";
+@import "mixins/panels.less";
+@import "mixins/pagination.less";
+@import "mixins/list-group.less";
+@import "mixins/nav-divider.less";
+@import "mixins/forms.less";
+@import "mixins/progress-bar.less";
+@import "mixins/table-row.less";
+
+// Skins
+@import "mixins/background-variant.less";
+@import "mixins/border-radius.less";
+@import "mixins/gradients.less";
+
+// Layout
+@import "mixins/clearfix.less";
+@import "mixins/center-block.less";
+@import "mixins/nav-vertical-align.less";
+@import "mixins/grid-framework.less";
+@import "mixins/grid.less";
+
+.radius(@radius)
+{
+	-webkit-border-radius: @radius;
+	   -moz-border-radius: @radius;
+	    -ms-border-radius: @radius;
+	     -o-border-radius: @radius;
+	        border-radius: @radius;
+}
+
+.transition(@properties)
+{
+	-webkit-transition: @properties;
+	   -moz-transition: @properties;
+	    -ms-transition: @properties;
+	     -o-transition: @properties;
+	        transition: @properties;
+}
+
+.translate(@px, @py)
+{
+	-webkit-transform: translate(@px, @py);
+	   -moz-transform: translate(@px, @py);
+	    -ms-transform: translate(@px, @py);
+	     -o-transform: translate(@px, @py);
+	        transform: translate(@px, @py);
+}
+
+.translateX(@px)
+{
+	-webkit-transform: translateX(@px);
+	   -moz-transform: translateX(@px);
+	    -ms-transform: translateX(@px);
+	     -o-transform: translateX(@px);
+	        transform: translateX(@px);
+}
+
+.translateY(@px)
+{
+	-webkit-transform: translateY(@px);
+	   -moz-transform: translateY(@px);
+	    -ms-transform: translateY(@px);
+	     -o-transform: translateY(@px);
+	        transform: translateY(@px);
+}
+
+.rotate(@deg)
+{
+	-webkit-transform: rotate(@deg);
+	   -moz-transform: rotate(@deg);
+	    -ms-transform: rotate(@deg);
+	     -o-transform: rotate(@deg);
+	        transform: rotate(@deg);
+}
+
+.rotateX(@deg)
+{
+	-webkit-transform: rotateX(@deg);
+	   -moz-transform: rotateX(@deg);
+	    -ms-transform: rotateX(@deg);
+	     -o-transform: rotateX(@deg);
+	        transform: rotateX(@deg);
+}
+
+.rotateY(@deg)
+{
+	-webkit-transform: rotateY(@deg);
+	   -moz-transform: rotateY(@deg);
+	    -ms-transform: rotateY(@deg);
+	     -o-transform: rotateY(@deg);
+	        transform: rotateY(@deg);
+}
+
+.rotateZ(@deg)
+{
+	-webkit-transform: rotateZ(@deg);
+	   -moz-transform: rotateZ(@deg);
+	    -ms-transform: rotateZ(@deg);
+	     -o-transform: rotateZ(@deg);
+	        transform: rotateZ(@deg);
+}
+
+.scale(@times)
+{
+    -webkit-transform: scale(@times);
+	   -moz-transform: scale(@times);
+	    -ms-transform: scale(@times);
+	     -o-transform: scale(@times);
+	        transform: scale(@times);
+}
+
+.scaleX(@times)
+{
+    -webkit-transform: scaleX(@times);
+	   -moz-transform: scaleX(@times);
+	    -ms-transform: scaleX(@times);
+	     -o-transform: scaleX(@times);
+	        transform: scaleX(@times);
+}
+
+.scaleY(@times)
+{
+    -webkit-transform: scaleY(@times);
+	   -moz-transform: scaleY(@times);
+	    -ms-transform: scaleY(@times);
+	     -o-transform: scaleY(@times);
+	        transform: scaleY(@times);
+}
+
+.transform(@properties)
+{
+	-webkit-transform: @properties;
+	   -moz-transform: @properties;
+	    -ms-transform: @properties;
+	     -o-transform: @properties;
+	        transform: @properties;
+}
+
+.transform-origin(@origin)
+{
+    -ms-transform-origin: @origin;
+    -webkit-transform-origin: @origin;
+    transform-origin: @origin;
+}
+
+.animation(@properties)
+{
+	// name, duration, easing, delay, iteration, direction
+
+	-webkit-animation: @properties;
+	   -moz-animation: @properties;
+	    -ms-animation: @properties;
+	     -o-animation: @properties;
+	        animation: @properties;
+}
+
+.text-shadow(@horizontal, @vertical, @blur, @color)
+{
+	-webkit-text-shadow: @horizontal @vertical @blur @color;
+	   -moz-text-shadow: @horizontal @vertical @blur @color;
+	    -ms-text-shadow: @horizontal @vertical @blur @color;
+	     -o-text-shadow: @horizontal @vertical @blur @color;
+	        text-shadow: @horizontal @vertical @blur @color;
+}
+
+.drop-shadow(@horizontal, @vertical, @blur, @color)
+{
+	-webkit-box-shadow: @horizontal @vertical @blur @color;
+	   -moz-box-shadow: @horizontal @vertical @blur @color;
+	    -ms-box-shadow: @horizontal @vertical @blur @color;
+	     -o-box-shadow: @horizontal @vertical @blur @color;
+	        box-shadow: @horizontal @vertical @blur @color;
+}
+
+.user-select(@select: none)
+{
+	-webkit-user-select: @select;
+	-moz-user-select: @select;
+	-ms-user-select: @select;
+	-o-user-select: @select;
+	user-select: @select;
+}
+
+.background-size(@select)
+{
+	-webkit-background-size: @select;
+	-moz-background-size: @select;
+	-ms-background-size: @select;
+	-o-background-size: @select;
+	background-size: @select;
+}
+
+.opacity(@opacity: 50)
+{
+	@opa: @opacity / 100;
+	-webkit-opacity: @opa;
+	-moz-opacity: @opa;
+	opacity: @opa;
+    -ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=@{opa})';
+    -khtml-opacity: @opa;
+    filter: alpha(opacity=@opa);
+}
+
+.filter(@value)
+{
+	-webkit-webkit-filter: @value;
+	-moz-webkit-filter: @value;
+	-ms-webkit-filter: @value;
+	-o-webkit-filter: @value;
+	filter: @value;
+}
+
+.rect(@width, @height)
+{
+	width: @width;
+	height: @height;
+}
+
+.appearance(@val)
+{
+	-webkit-appearance: @val;
+	-moz-appearance: @val;
+}
+
+
+
+
+
+

@@ -1,0 +1,21 @@
+.select {
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid @color-gray;
+    .radius(4px);
+    .transition(.2s);
+    &:hover {
+      background-color: lighten(@color-gray, 5%);
+    }
+    &:focus {
+      border: 1px solid darken(@color-gray, 10%)
+    }
+    &:disabled {
+        background-color: @color-gray;
+        color: @color-gray;
+        cursor: default;
+    }
+}

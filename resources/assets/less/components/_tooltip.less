@@ -1,0 +1,42 @@
+.tooltip {
+	cursor: default;
+	display: none;
+	position: absolute;
+	right: 45%;
+	top: -20px;
+	.translate(100px, -100%);
+	z-index: 2;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    font-size: .875rem;
+    word-wrap: break-word;
+    font-family: 'LatoRegular';
+
+	&-inner {
+		max-width: 225px;
+		width: 225px;
+		padding: 10px;
+		color: #838383;
+		background-color: #fff;
+		.box-shadow(0,0,15px,rgba(0,0,0,0.15));
+		.radius(4px);
+		position: relative;
+
+		&:after {
+			content: '';
+			display: inline-block;
+			position: absolute;
+		    bottom: -8px;
+			left: 48%;
+		    background: #fff;
+		    .rotate(-135deg);
+		    .size(15px, 15px);
+			.box-shadow(-10px, -10px, 25px, rgba(0,0,0,0.15));
+		}
+	}
+}
+
+.tooltip--checkout {
+	.translate(110px, -100%);
+}

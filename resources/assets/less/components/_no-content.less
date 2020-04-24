@@ -1,0 +1,44 @@
+.no-content {
+	text-align: center;
+	margin: 80px 0 150px;
+
+	&__thumb {
+		margin-right: 55px;
+	}
+
+	&__wrap {
+		margin-top: 50px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+
+@media (min-width: @screen-md) {
+	.no-content {
+
+		&__wrap--fixed-lg {
+			width: 380px;
+			text-align: left;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.no-content {
+		margin-bottom: 70px;
+
+		&__thumb {
+			margin-right: 0;
+			margin-left: 30px;
+
+			&--video {
+				margin-left: 0;
+			}
+		}
+
+		&__wrap {
+			margin-top: 50px;
+			display: block;
+		}
+	}
+}

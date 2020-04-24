@@ -1,0 +1,28 @@
+/*
+ * Alert
+ *
+ * Define alert used for informing user
+ */
+
+.alert{
+	font-size: 14px;
+	
+	&-danger {
+		background-color: @color-danger!important;
+		color: #fff;
+	}
+
+	&-success {
+		background-color: @color-success!important;
+		color: #fff;
+	}
+
+	& .close {
+		font-size: 30px;
+		line-height: 25px;
+	    vertical-align: middle;
+	    margin-left: 15px;
+	    position: relative;
+	    top: -2px;
+	}
+}

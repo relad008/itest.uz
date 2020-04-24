@@ -1,0 +1,105 @@
+.table {
+	width: 100%;
+	font-size: 14px;
+
+	&-wrap {
+		.blocks-shadow;
+		background-color: #fff;
+		.rounded;
+	}
+
+	& th {
+		text-align: left;
+		border-bottom: 1px solid @color-gray;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		font-weight: normal;
+		.font-medium;
+
+		&:first-child {
+			padding-left: 25px;
+		}
+	}
+
+	& tr {
+
+		& td {
+			border-bottom: 1px solid @color-gray;
+			padding-top: 10px;
+			padding-bottom: 10px;
+
+			&:first-child {
+				padding-left: 25px;
+			}
+
+			&:last-child {
+				padding-right: 25px;
+			}
+		}
+	}
+
+	&-nav {
+		float: right;
+		padding: 12px 15px 10px 25px;
+		color: #979797;
+		font-size: 14px;
+
+		& p, & div {
+			float: left;
+		}
+
+		& select {
+			.appearance(none);
+			color: #434343;
+		}
+
+		&__s-wrap {
+			position: relative;
+			margin: 0 15px;
+
+			& select {
+				padding-right: 20px;
+				position: relative;
+				z-index: 2;
+				cursor: pointer;
+			}
+
+			& i {
+				font-size: 8px;
+				position: absolute;
+				z-index: 1;
+				.centered-y;
+				right: 5px;
+				pointer-events: none;
+			}
+		}
+
+		&__quantity {
+			margin: 0 30px 0 45px;
+		}
+
+		&__arrow {
+			cursor: pointer;
+			padding: 0 10px;
+			text-align: center;
+
+			&:hover {
+				color: #434343;
+			}
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	.table {
+
+		& tr td {
+			font-size: 14px;
+		}
+
+		&-nav {
+		    width: 450px;
+		    float: left;
+		}
+	}
+}

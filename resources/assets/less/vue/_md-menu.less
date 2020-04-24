@@ -1,0 +1,95 @@
+.md-menu {
+
+	&.md-select {
+		display: block;
+
+	    & .md-input {
+	    	cursor: pointer;
+	    	outline: none;
+	    	padding-right: 40px;
+	    }
+
+	    & .md-input-fake, & select {
+    	    width: 1px;
+		    height: 1px;
+		    margin: -1px;
+		    padding: 0;
+		    overflow: hidden;
+		    position: absolute;
+		    clip: rect(0 0 0 0);
+		    border: 0;
+	    }
+
+	    & .md-icon {
+	    	display: none;
+	    }
+
+	    &:after {
+			content: @icon-dropdown-arrow;
+			font-family: @icomoon-font-family;
+			position: absolute;
+			top: 50%;
+			.translateY(-50%);
+			right: 16px;
+		    pointer-events: none;
+		    font-size: 10px;
+		}
+	}
+
+}
+
+.md-select-menu {
+	.box-shadow(0px, 0px, 20px, rgba(173,182,217,0.45));
+	overflow: hidden;
+	height: 0;
+	.rounded;
+	background-color: #fff;
+
+	& .md-menu-content-container {
+		overflow: auto;
+		width: 400px;
+    	margin: 7px 0;
+    	position: relative;
+
+		&::-webkit-scrollbar-thumb {
+			.radius(3px);
+			background-color: @color-brand;
+			cursor: pointer;
+		}
+
+		&::-webkit-scrollbar-thumb:hover{
+			background-color: lighten(@color-brand, 10%);
+		}
+
+		&::-webkit-scrollbar{
+			width: 6px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: rgba(209, 216, 245, .15);
+		}
+
+		& .md-list {
+			background-color: #fff;
+			max-height: 135px;
+
+			& .md-menu-item {
+				display: block;
+				padding: 5px 15px;
+				.transition(all .3s ease);
+				font-size: 12px;
+				cursor: pointer;
+
+				&:hover {
+					background-color: @color-brand;
+					color: #fff;
+				}
+			}
+
+			& .md-list-item-text {
+				display: block;
+				text-align: left;
+			}
+		}
+	}
+}

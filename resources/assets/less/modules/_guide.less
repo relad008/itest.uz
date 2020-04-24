@@ -1,0 +1,50 @@
+.guide {
+	background: #fff;
+	text-align: center;
+	padding: @layout-space-xs 0;
+
+	&__wrap {
+		position: relative;
+
+		&:after {
+			content: "";
+			position: absolute;
+			height: 3px;
+			background-color: #BFF5BF;
+			left: 100px;
+			right: 100px;
+			top: 45px;
+		}
+	}
+	
+	&__icon {
+		position: relative;
+		display: block;
+		margin: 0 auto 25px;
+		.size(90px, 90px);
+		.radius(100%);
+		background-color: #BFF5BF;
+
+		& img {
+			position: absolute;
+			.centered;
+			z-index: 2;
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.guide {
+		padding: 80px 0 50px;
+
+		&__wrap {
+			&:after {
+				content: unset;
+			}
+		}
+
+		&__item {
+			margin-bottom: 30px;
+		}
+	}
+}

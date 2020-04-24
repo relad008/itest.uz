@@ -1,0 +1,29 @@
+.bg-img-group {
+
+    background-color: rgba(230, 234, 250, .3);
+    width: 200%;
+    height: 850px;
+    position: absolute;
+    .rotate(-170deg);
+    top: -50%;
+    left: -15%;
+
+    &--transparent {
+        background-color: transparent;
+    }
+
+    &--profi {
+        height: 710px;
+        background: -moz-linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, #FBAB7E 0%, #F7CE68 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FBAB7E', endColorstr='#F7CE68',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+	&__item {
+	    position: absolute;
+	    z-index: 2;
+		.size(262px, 55px);
+	}
+
+}

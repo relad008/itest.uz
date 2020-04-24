@@ -1,0 +1,56 @@
+/*
+ * UI Input
+ *  
+ * Create UI Inputs using this module
+ */
+
+ input:-webkit-autofill {
+ 	// border-color: @color-brand;
+
+	& ~ .label{
+		top: -12px;
+		font-size: 13px;
+		opacity: .6;
+		// color: @color-brand;
+	 }
+ }
+
+.input {
+	width: 100%;
+	border-bottom: 2px solid @color-gray;
+	padding: 8px 0;
+	line-height: 1.25;
+	.radius(0);
+	font-family: @base-font-family;
+	-webkit-box-shadow: 0 0 0px 1000px #fff inset;
+	color: @base-font-color;
+	.transition(border .2s ease);
+	font-size: 14px;
+
+	&--no-inner-box-shadow {
+		-webkit-box-shadow: 0 0 0px 1000px transparent inset;
+	}
+	
+	.placeholder({color: @color-black;});
+
+	&:focus {
+		border-color: @color-brand;
+	}
+
+	&:disabled {
+		background-color: @color-gray;
+		color: @color-gray-text;
+	}
+
+	&[readonly] {
+		background-color: @color-gray;
+		color: @color-gray-text;
+		opacity:1;
+	}
+
+	&--textarea {
+		min-height: 100px;
+		height: 120px;
+		max-height: 140px;
+	}
+}

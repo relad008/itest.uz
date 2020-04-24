@@ -1,0 +1,71 @@
+/*
+|
+| Basic checkbox
+| -----------------------------------------------------
+| Example: 
+| 
+| <label class="checkbox">
+|     <input type="checkbox" name="checkbox">
+|	  <span>Your checkbox label</span>
+| </label> 
+| 		  
+|
+*/
+
+label.checkbox
+{
+	display: inline;
+	cursor: pointer;
+	margin-bottom: 0;
+	.user-select(none);
+
+	input{
+		display: none;
+
+		~ span{
+			&:before{
+				content: '';
+				display: inline-block;
+				margin-right: 5px;
+				vertical-align: middle;
+				width: 22px;
+				height: 22px;
+				background: #fff url(../img/forms-sprite.png) no-repeat;
+				background-position: 0 0;
+				background-size: 240px 24px;
+			}
+		}
+
+		&:checked {
+			~ span{
+				&:before{
+					background-position: -48px 0;
+				}
+			}
+		}
+
+		&:disabled{
+			~ span{
+				&:before{
+					background-position: -72px 0;
+				}
+			}
+		}
+	}
+
+	&--textless{
+		span{
+			&:before{
+				margin-right: 0;
+			}
+		}
+	}
+
+	&:hover{
+		& > span{
+			&:before{
+				background-position: -24px 0;
+			}
+		}
+	}
+}

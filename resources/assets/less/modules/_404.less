@@ -1,0 +1,72 @@
+.p-404 {
+	position: absolute;
+	.centered;
+
+	&-wrap {
+		padding-top: 23px;
+		float: left;
+		padding-right: 70px;
+	}
+
+	&-logo {
+		width: 126px !important;
+		height: 45px !important;
+		background-size: 126px 45px!important;
+	}
+
+	&-title {
+		font-size: 36px;
+		line-height: 36px;
+		.font-semibold;
+		padding: 25px 0 20px;
+	}
+
+	&-info {
+		font-size: 18px;
+		padding-bottom: 25px;
+	}
+
+	&-img {
+		height: 270px;
+	}
+}
+
+@media (max-width: @screen-md) {
+	.p-404 {
+		width: 475px;
+	}
+}
+
+@media (max-width: 525px) {
+	.p-404 {
+		width: 475px;
+
+		&-wrap {
+			padding-left: 60px;
+			float: none;
+		}
+
+		&-img {
+			position: absolute;
+			right: 10%;
+			top: 0;
+		}
+	}
+}
+
+@media (max-width: 385px) {
+	.p-404 {
+		width: 100%;
+
+		&-wrap {
+			padding: 0 15px;
+			float: none;
+			position: relative;
+			z-index: 1;
+		}
+
+		&-img {
+			right: 4%;
+		}
+	}
+}

@@ -1,0 +1,152 @@
+.header {
+	.size(100%, @header-height);
+	.box-shadow(0, 2px, 100px, rgba(221, 221, 221, 0.5));
+	background-color: #fff;
+	font-size: 14px;
+	line-height: 17px;
+	position: relative;
+	z-index: 101;
+
+	&__wrap {
+		height: @header-wrap-height;
+	}
+
+	&__logo-wrap {
+		position: relative;
+		display: inline-block;
+	}
+
+	&__dropdown-wrap {
+		top: @header-wrap-height + 1; // because of border
+	}
+
+	&__menu {
+		float: right;
+		height: 100%;
+
+		&-wrap {
+			height: @header-wrap-height;
+			display: table-cell;
+			vertical-align: middle;
+
+			&:first-child {
+				padding-right: 18px;
+			}
+		}
+
+		&-item {
+			position: relative;
+			height: @header-wrap-height;
+			display: table-cell;
+			text-align: center;
+			vertical-align: middle;
+			padding: 0 18px;
+			.transition(background .3s ease);
+			border-right: 1px solid @color-gray;
+			min-width: 122px;
+
+			&:hover {
+				background-color: @color-bg-gray;
+			}
+
+			&--spaced-left {
+				padding-left: 42px;
+				border-left: 1px solid @color-gray;
+			}
+		}
+
+		&-icon-person {
+			font-size: 18px;
+			position: absolute;
+			.translateY(-50%);
+			top: 48%;
+			left: 18px;
+		}
+	}
+}
+
+@media (max-width: @screen-sm) {
+	.header {
+		height: @header-height-sm;
+
+		&__logo-wrap {
+			height: @header-height-sm;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 250px;
+			height: 64px;
+			background-color: #fff;
+			z-index: 101;
+		}
+
+		&__menu {
+		    display: none;
+		    float: none;
+		    width: 100%;
+		    z-index: 101;
+		    background-color: #fff;
+		    height: auto;
+		    text-align: right;
+		    border-bottom: 1px solid @color-gray;
+			.transition(transform .2s ease);
+
+		    &-wrap {
+		    	display: block;
+		    	height: auto;
+
+		    	&:first-child {
+		    		padding-bottom: 15px;
+		    		border-bottom: 1px solid @color-gray;
+		    	}
+
+		    	& .dropdown {
+
+		    		&__wrap {
+		    			position: static;
+		    			max-height: unset;
+		    			box-shadow: unset;
+		    			height: 36px;
+		    			opacity: 1;
+		    			visibility: visible;
+		    		}
+
+		    		&__icon {
+		    			display: none;
+		    		}
+		    	}
+		    }
+
+			&-icon-person {
+				right: 18px;
+				left: auto;
+			}
+
+		    &-item {
+		    	height: 36px;
+	    		border: none;
+	    		display: block;
+	    		padding-top: 10px;
+	    		padding-bottom: 10px;
+	    		text-align: right;
+
+		    	&:first-child {
+		    		border: none;
+		    	}
+
+		    	&--spaced-left {
+		    		padding-left: 18px;
+		    		padding-right: 42px;
+		    	}
+		    }
+		}
+
+		&__logo-wrap {
+			display: block;
+		}
+	}
+}

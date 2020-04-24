@@ -1,0 +1,143 @@
+.video {
+	padding-top: @layout-space-xs;
+	
+	&__frame {
+		margin-bottom: 30px;
+		width: 100%;
+		height: 430px;
+		background-color: #f0f0f0;
+		.rounded;
+	}
+
+	&__title {
+		font-size: 22px;
+		.font-medium;
+		margin-bottom: 20px;
+		font-weight: normal;
+	}
+
+	&__category {
+		font-size: 18px;
+		margin-bottom: 15px;
+
+		&-item {
+			margin-left: 10px;
+			color: @color-lightgray;
+			.transition(color .2s ease);
+
+			&:hover {
+				color: @color-brand;
+			}
+		}
+	}
+
+	&__tags {
+		margin-bottom: 5px;
+
+		&-item {
+			display: inline-block;
+			background-color: @color-brand;
+			color: #fff;
+			.transition(background .2s ease);
+			font-size: 14px;
+			margin-left: 10px;
+			.rounded;
+			padding: 7px 15px;
+			margin-bottom: 10px;
+
+			&:hover {
+				background-color: @color-brand-hovered;
+			}
+
+			&:active {
+				background-color: @color-brand-active;
+			}
+		}
+	}
+
+	&__info {
+		font-size: 14px;
+		line-height: 24px;
+		margin-bottom: @layout-space-xs;
+	}
+
+	&__card {
+		margin-bottom: @layout-xl;
+		.box-shadow(0, 4px, 6px, rgba(50, 50, 93, 0.1));
+		.transition(all .2s ease);
+
+		&:hover {
+			.box-shadow(0, 4px, 6px, rgba(50, 50, 93, 0.2));
+		}
+
+		&-img {
+			.top-rounded;
+			.size(100%, 144px);
+			background: #fff no-repeat center;
+			background-size: cover;
+			display: block;
+		}
+
+		&-title {
+			display: block;
+			font-size: 14px;
+			.font-semibold;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+
+		&-wrap {
+			padding: 16px;
+			background-color: #fff;
+			.rounded;
+		}
+
+		&-category {
+			font-size: 14px;
+			color: @color-gray-text;
+			.transition(color .1s ease);
+
+			&:hover {
+				color: @color-brand;
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.video {
+
+		&__frame {
+			height: 330px;
+		}
+
+		&__card-wrap {
+			min-height: 121px;
+		}
+
+		&__card {
+			width: 45%;
+			margin: 0 15px 30px;
+			float: left;
+		}
+	}
+}
+
+@media (max-width: @screen-sm) {
+	.video {
+
+		&__card-wrap {
+			min-height: 0;
+		}
+
+		&__card {
+			width: 75%;
+			margin: 0 auto 30px;
+			float: none;
+
+			&-img {
+				height: 244px;
+			}
+		}
+	}
+}

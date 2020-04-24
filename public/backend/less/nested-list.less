@@ -1,0 +1,44 @@
+.nested-list {
+	list-style: none;
+
+	&__item {
+		position: relative;
+		margin: 10px 0;
+
+		& > ul {
+			display: none;
+			margin-left: 30px;
+		}
+
+		&--active {
+			
+			.nested-list__caret {
+				.rotate(90deg);
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		color: #333;
+		padding-right: 25px;
+		position: relative;
+	}
+
+	&__caret {
+		// position: absolute;
+		// right: 25px;
+		// top:50%;
+		font-size: 14px;
+		margin-left: 5px; 
+		// margin-top: -8px;
+		.transition(transform 0.2s ease-in-out);
+	}
+
+	&__radio {
+		position: absolute;
+		right: 0px;
+		top:50%;
+		margin-top: -12px;
+	}
+}

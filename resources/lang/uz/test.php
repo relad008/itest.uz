@@ -1,0 +1,20 @@
+<?php
+ return array (
+  'today_test_complete' => 'Bugun o’tilgan testlar',
+  'limit_mess' => 'Siz bir kunda 6 ta variant yechishingiz mumkin',
+  'start' => 'Testni boshlash',
+  'question' => 'Savol',
+  'from' => 'dan ',
+  'time_left' => ' Qoldi',
+  'hour' => 's.',
+  'minutes' => ' daqiqa',
+  'seconds' => 'soniya',
+  'next_question' => 'Keyingi savol',
+  'finish_test' => 'Testni yakunlash',
+  'select_category' => ' Test kategoriyasini tanlang',
+  'goto_subjects' => 'Fanlarga o’tish',
+  'goto_text' => 'Matnga o’tish',
+  'goto_questions' => 'Savollar ro’yxatiga o’tish',
+  'subthemes' => 'kichik mavzu',
+  'select_thme' => 'Mavzuni tanlash',
+);

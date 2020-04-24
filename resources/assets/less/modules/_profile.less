@@ -1,0 +1,156 @@
+.profile {
+	padding-bottom: @layout-space-xs;
+
+	&__info {
+		position: relative;
+		margin-bottom: 20px;
+		padding: 5px 0 5px 20px;
+
+		&-name {
+			.font-medium;
+			font-size: 18px;
+			padding-bottom: 5px;
+		}
+
+		&-num {
+			font-size: 14px;
+
+			& i {
+				font-size: 18px;
+				position: relative;
+				top: 2px;
+			}
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 3px;
+			background-color: @color-brand;
+		}
+	}
+
+	&__nav {
+		background-color: #fff;
+		.blocks-shadow;
+		.rounded;
+		overflow: hidden;
+		margin-bottom: 30px;
+
+		&-item {
+
+			&.is-active .profile__nav-link {
+				background-color: rgba(161, 191, 211, 0.15);
+			}
+
+		}
+
+		&-link {
+			font-size: 14px;
+			padding: 15px 30px 15px 52px;
+			position: relative;
+			.transition(background .2s ease);
+			display: block;
+
+			& i {
+				position: absolute;
+				left: 20px;
+				.centered-y;
+				color: #767676;
+				font-size: 18px;
+
+				&.icon--lg {
+					font-size: 23px;
+				}
+			}
+
+			&--second {
+				border-top: 1px solid @color-gray;
+				border-bottom: 1px solid @color-gray;
+
+				& i {
+					font-size: 20px;
+					left: 21px;
+				}
+			}
+
+			&--third {
+				border-bottom: 1px solid @color-gray;
+			}
+
+			&:hover {
+				background-color: rgba(161, 191, 211, 0.15);
+			}
+		}
+	}
+
+	&__card {
+		padding: 40px 30px 30px;
+		background-color: #fff;
+		.blocks-shadow;
+		.rounded;
+	}
+
+	&__tabs {
+
+		&-content {
+			width: 540px;
+		}
+	}
+	
+	&__s {
+
+		&-title {
+			font-size: 13px;
+			opacity: .6;
+		}
+
+		&-wrap {
+			position: relative;
+			margin-bottom: 15px!important;
+
+			& span {
+				font-size: 14px;
+				opacity: .6;
+				position: absolute;
+				left: 10px;
+				top: 8px;
+			}
+
+			& select {
+				padding-left: 30px;
+				font-size: 14px;
+				cursor: pointer;
+				.appearance(none);
+			}
+
+			& input.md-input {
+				padding-left: 35px;
+				font-size: 14px;
+			}
+
+			&:after {
+				content: @icon-dropdown-arrow;
+				font-family: @icomoon-font-family;
+				position: absolute;
+				top: 50%;
+				.translateY(-50%);
+				right: 16px;
+			    pointer-events: none;
+			    font-size: 10px;
+			}
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.profile {
+
+		&__tabs-content {
+			width: 100%;
+		}
+	}
+}

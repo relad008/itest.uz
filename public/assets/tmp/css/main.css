@@ -1,0 +1,44 @@
+.header {
+	border-bottom: 1px solid #efefef;
+}
+
+.contact {
+	border-bottom: 1px solid #000;
+}
+
+.c-pointer {
+	cursor: pointer;
+}
+
+input.validation-error {
+	border-color: #c00;
+}
+
+label.validation-error {
+	position: absolute;
+	color: #c00;
+	font-size: 12px;
+	bottom: 0;
+}
+
+/* payment styles */
+.payment-logo {
+	max-width: 195px;
+	margin: 0 auto 1em;
+}
+
+.payment-logo--sm {
+	max-width: 125px;
+}
+
+.payment-logo img {
+	width: 100%;
+}
+
+.tarif-price {
+	min-height: 125px;
+}
+
+.table-td-v-align-middle td {
+	vertical-align: middle;
+}

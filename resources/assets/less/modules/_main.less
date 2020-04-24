@@ -1,0 +1,135 @@
+.main {
+	padding-top: @layout-space-sm;
+	height: 620px;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+
+    &__info {
+
+    	&-item {
+    		width: 80%;
+    		padding-bottom: @layout-space-xs;
+    	}
+    }
+
+    &__video-wrap {
+    	position: relative;
+		.radius(11px);
+		.size(100%, 350px);
+		overflow: hidden;
+		background: url(../images/video-poster.jpg) no-repeat center;
+		background-size: cover;
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			opacity: .7;
+			background: #102397; /* Old browsers */
+			background: -moz-linear-gradient(45deg, #102397 0%, #187ADF 55%, #00EAF8 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(45deg, #102397 0%,#187ADF 55%,#00EAF8 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(45deg, #102397 0%,#187ADF 55%,#00EAF8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#102397', endColorstr='#00EAF8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 2;
+			background: transparent url(../images/play.svg) no-repeat center;
+			cursor: pointer;
+		}
+
+		&.play {
+			background-image: unset;
+
+			&:before, &:after {
+				content: unset;
+			}
+		}
+    }
+
+    &__video {
+		.size(100%, 350px);
+    }
+
+    &__bg-img {
+    	
+		&-left1 {
+			background-color: #E6F0F1;
+		    left: 85%;
+		    top: -55px;
+		}
+
+		&-left2 {
+			background-color: #E9F9EF;
+		    left: 82%;
+		    top: -110px;
+		}
+
+		&-left3 {
+			background-color: transparent;
+			border: 1px solid #DED5D5;
+		    left: 71%;
+		    top: -55px;
+		}
+
+		&-right {
+			background-color: #77D2A1;
+		    right: 54%;
+		    top: 0px;
+		}
+    	
+    }
+}
+
+@media (max-width: @screen-lg) {
+	.main {
+
+	    &__info {
+
+	    	&-item {
+	    		width: 100%;
+	    	}
+	    }
+
+		&__video-wrap {
+			height: 275px;
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.main {
+		height: auto;
+		padding-top: 20px;
+
+	    &__info {
+	    	text-align: center;
+	    	margin-bottom: @layout-space-xs;
+	    }
+
+		&__video-wrap {
+			height: 350px;
+		}
+	}
+}
+
+@media (max-width: @screen-md) {
+	.main {
+
+		&__video-wrap {
+			height: 300px;
+		}
+	}
+}

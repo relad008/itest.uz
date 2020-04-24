@@ -1,0 +1,144 @@
+.sidebar{
+	float: left;
+	width: 220px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 99;
+	margin-top: 60px;
+	overflow-x: hidden;
+	border-right: 1px solid #e6e8f1;
+
+	// Minimized navbar
+
+	&__label{
+		font-size: 10px;
+		padding: 17px 0 0 17px;
+		color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__info{
+		padding: 10px 0 10px 17px;
+		color:#686868;
+		border-bottom: 1px solid #e6e8f1;
+	}
+
+	&__nav{
+		list-style: none;
+	}
+
+	&__list{
+		&--active{
+			> a{
+				color: #222;
+				border-right: 3px solid #3ecf8e;
+			}	
+
+			.sidebar__caret{
+				.rotate(90deg);
+			}
+
+			.sidebar__list--active > a{
+				color: #222;
+				background: transparent;
+			}
+		}
+	}
+
+	&__link{
+		display: block;
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 14px;
+		padding: 15px 17px;
+		position: relative;
+		font-weight: 300;
+		border-bottom: 1px solid #e6e8f1;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-o-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+		// For dropdown links different style
+
+		&--dropdown{
+			padding: 10px 0 10px 34px;
+
+			&:before{
+				content: "\f10c";
+				width: 6px;
+				height: 17px;
+				display: inline-block;
+				.font-awesome();
+				font-size: 8px;
+				vertical-align: middle;
+				line-height: 17px;
+			}
+
+			.sidebar__text{
+				padding-left: 5px;
+			}
+
+			&:hover {
+				&:before {
+					content: "\f111";
+					color: #3ecf8e;
+				}
+			}
+		}
+
+		&:hover {
+			text-decoration: none;
+			background-color: #F5F6FA;
+
+		}
+	}
+
+	&__icon {
+		// color:#00AA77;
+		color: #aaa;
+		width: 27px;
+		text-align: center;
+		// background-color: #bff5bf;
+		border-radius: 50%;
+		margin-right: 14px;
+	}
+	
+	// Only mobile visible
+	&__mobile-text{
+		display: none;
+	}
+
+	&__tag{
+		float: right;
+	}
+
+	&__caret{
+		position: relative;
+		float: right;
+		font-size: 14px;
+		margin-left: 12px;
+		margin-top: 1px;
+		.transition(transform 0.2s ease-in-out);
+	}
+
+	&__dropdown{
+		display: none;
+		background-color: rgba(0, 0, 0, 0.02);
+	}
+}
+
+@media(max-width: 768px){
+	.sidebar{
+		.transition(all 200ms ease-in-out);
+
+		&__link{
+			&:after{
+				border-right-color: #a6a8aa;
+			}
+		}
+	}
+}

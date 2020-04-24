@@ -1,0 +1,69 @@
+/*
+ * Title
+ *  
+ * Create a title
+ * styles shared throughout your website
+ */
+
+.title {
+	font-family: @font-medium;
+	font-size: 28px;
+	line-height: 28px;
+	font-weight: normal;
+
+	&-lg {
+		font-size: 40px;
+	}
+
+	&-sm {
+		font-size: 24px;
+	}
+}
+
+.subtitle {
+	opacity: .8;
+}
+
+.title-wrap {
+	padding: 25px 0;
+	
+	&__start {
+		float: left;
+	}
+
+	&__end {
+		float: right;
+		padding-top: 3px;
+	}
+
+	&__payment {
+		float: left;
+		padding: 10px 25px 10px 0;
+		font-size: 18px;
+		position: relative;
+
+		& i {
+			position: absolute;
+			left: -35px;
+			.centered-y;
+			font-size: 24px;
+		}
+	}
+}
+
+
+@media (max-width: @screen-md) {
+	.title-wrap {
+
+		&__start {
+			float: none;
+		}
+
+		&__end {
+			float: none;
+			padding-left: 35px;
+			padding-top: 25px;
+		}
+
+	}
+}

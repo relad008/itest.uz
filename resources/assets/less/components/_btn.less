@@ -1,0 +1,109 @@
+/*
+ * UI Button
+ *  
+ * Create UI Buttons using this module.
+ *
+ * Note: To create new type of button
+ *       first extend '.btn-base'.
+ */
+
+/*
+ * Base for all buttons 
+ */
+
+.btn-base {
+	display: inline-block;
+	white-space: nowrap;
+	cursor: pointer;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+    touch-action: manipulation;
+
+	/* Prevent user from selecting the UI element */
+	.user-select(none);
+}
+
+/*
+ * Simple button
+ */
+
+.btn{
+	/* Extend base btn */
+	&:extend(.btn-base);
+
+	/* Unique styles */
+	padding: 9px 15px;
+	font-family: @base-font-family;
+	font-size: 14px;
+	line-height: 20px;
+    .radius(@border-radius);
+	.transition(all .2s ease);
+	border: 1px solid transparent;
+
+	&--brand {
+		background: @color-brand;
+		color: #fff;
+
+		&:hover {
+			background: @color-brand-hovered;
+		}
+
+		&:active {
+			background: @color-brand-active;
+		}
+	}
+
+	&--brand-outline {
+		background-color: transparent;
+		color: @color-brand;
+		border: 1px solid @color-brand;
+
+		&:hover {
+			background-color: @color-brand;
+			color: #fff;
+		}
+
+		&:active {
+			background-color: @color-brand-active;
+		}
+	}
+
+	&--blue {
+		background: transparent;
+		color: @color-blue;
+		border: 1px solid @color-blue;
+
+		&:hover {
+			background: @color-blue;
+			color: #fff;
+		}
+
+		&:active {
+			background: darken(@color-blue, 5%);
+		}
+	}
+
+	&--danger {
+		background: @color-danger;
+		color: #fff;
+
+		&:hover {
+			background: lighten(@color-danger, 5%);
+		}
+
+		&:active {
+			background: darken(@color-danger, 5%);
+		}
+	}
+
+	&--y-lg {
+		padding-top: 13px;
+		padding-bottom: 13px;
+	}
+
+	&--x-lg {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+

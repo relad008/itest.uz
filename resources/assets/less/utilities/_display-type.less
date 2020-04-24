@@ -1,0 +1,52 @@
+/*
+ * Display type 
+ *
+ * Display type utility which
+ * has responsive breakpoints 
+ */
+ 
+.disabled {
+	opacity: .5;
+	pointer-events: none!important;
+	cursor: not-allowed!important;
+	&:hover {
+		pointer-events: none!important;
+		cursor: not-allowed!important;
+	}
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.display-block{
+	display: block!important;
+}
+
+.inline-block{
+	display: inline-block;
+}
+
+@media(max-width: @screen-lg){
+	.display-lg-block{
+		display: block;
+	}
+
+	.display-lg-inline-block{
+		display: inline-block;
+	}
+}
+
+@media(max-width: @screen-md){
+	.display-md-block{
+		display: block;
+	}
+
+	.display-md-inline-block{
+		display: inline-block;
+	}
+}

@@ -1,0 +1,138 @@
+.navbar{
+    height: 60px;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    border-bottom: 1px solid #e6e8f1;
+    z-index: 999;
+
+    &__brand{
+        position: relative;
+        width: 220px;
+        height: 60px;
+        float: left;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50%;
+        z-index: 1;
+        border-right: 1px solid #e6e8f1;
+    }
+
+    &__toggle{
+        position: relative;
+        cursor: pointer;
+        width: 55px;
+        height: 60px;
+        .transition(transform 200ms ease-out);
+
+        .bar() {
+            position: absolute;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+            left: 15px;
+            width: 22px;
+            height: 2px;
+            .transition(background-color 0.2s ease-in-out);
+        }
+
+        span {
+            top: 50%;
+            .translateY(-50%);
+            .bar;
+
+            &:before, &:after{
+                .bar;  
+            }
+
+            &:before
+            {
+                content: '';
+                top: -6px;
+                left: 50%;
+                .translateX(-50%);
+            }
+
+            &:after
+            {
+                content: '';
+                top: 6px;
+                left: 50%;
+                .translateX(-50%);
+            }
+        }
+
+        &:hover {
+            span, span:before, span:after{
+                background-color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+
+    &__nav {
+        float: right;
+        list-style: none;
+        line-height: 60px;
+    }
+
+    &__list {
+        float: left;
+        margin-right: 15px;
+
+        &--end {
+            margin-right: 0;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-top: -1px;
+
+        i {
+            font-size: 17px;
+            color: rgba(0, 0, 0, 0.5);
+            .transition(color 0.2s ease-in-out);
+        }
+        
+        &:hover {
+            text-decoration: none;
+            background-color: #f5f6fa;
+            
+        }
+    }
+    
+    &__logout {
+        width: 55px;
+        text-align: center;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &__tag {
+        position: relative;
+        top: -12px;
+    }
+}   
+
+@media(max-width: 768px){
+    .navbar{    
+    
+        &__brand{
+            display: none;
+        }
+
+        &__toggle{
+            span, span:after, span:before{
+                background-color: rgba(255, 255, 255, 0.5)
+            }
+
+            &:hover{
+                span, span:after, span:before{
+                    background-color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+
+        &__logout{
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+}

@@ -1,0 +1,141 @@
+.dropdowns{
+	position: relative;
+	background-color: #fff;
+	.transition(all .3s);
+	max-width: 62px;
+	margin-left: 5px;
+	.toolbar__link {
+		position: relative;
+		border: 1px solid transparent;
+		line-height: 28px;
+		padding: 0 20px 0 10px;
+		& i {
+		    position: absolute;
+		    top: 10px;
+		    right: 5px;
+		    .transition(all .3s);
+		    font-size: 7px;
+		}
+		&:after {
+		    content: '';
+		    position: absolute;
+		    height: 1px;
+		    background: #fff;
+		    width: 99%;
+		}
+	}
+
+	&__menu{
+		position: absolute;
+		z-index: 101;
+		top: 100%;
+		min-width: 62px;
+		.radius(0 4px 4px 4px);
+		text-transform: capitalize;
+		&> a{
+			position: relative;
+			max-height: 0;
+		    overflow: hidden;
+		    white-space: nowrap;
+		    display: block;
+			line-height: 36px;
+			padding: 0 15px 0 10px;
+			.transition(all .2s linear);
+
+			&> i {
+				position: relative;
+				top: 2px;
+				right: -5px;
+				font-size: 14px;
+				color: @grey;
+				display: none;
+			}
+		}
+		&> a.active{
+			&> i {
+				display: inline-block;
+			}
+		}
+		&:first-child {
+			border-top: 1px solid @grey-border;
+			.radius(0 4px 0 0);
+		}
+	}
+	&:hover {
+		.dropdowns__menu {
+			background-color: #fff;
+			border: 1px solid @grey-border;
+			&> a {
+				max-height: 35px;
+				&:hover{
+					background: #f0f0f0;
+					color: @defaultcolor;
+				}
+			}
+		}
+
+		& .toolbar__link {
+			background-color: #fff;
+			border-color: @grey-border;
+			border-bottom-color: transparent;
+			position: relative;
+			& i {
+				.rotateX(180deg);
+			}
+			&:after {
+			    top: 103%;
+			    left: 0;
+			    z-index: 140;
+			}
+		}
+	}
+}
+
+// .main-dropdown {
+// 	// .transition(all 10s);
+// }
+
+.dropdown-wrapper {
+	display: none;
+}
+
+// .dropdown-wrapper {
+// 	// .transition(all 1s);
+// 	max-height: 0;
+// 	overflow: hidden;
+// 	// display: inline-block;
+// }
+
+
+
+// .main-dropdown.active {
+// 	// .transition(max-height .3s);
+// 	.dropdown-wrapper {
+// 		max-height: 9999px;
+// 	// .transition(max-height .3s);
+// 	}
+// 	.bottom-arrow {
+// 		.rotateX(180deg);
+// 		top: 4px;
+// 	}
+// }
+
+
+
+.rotate-dropdown-arrow{
+	.rotateX(180deg);
+	top: 4px;
+}
+
+@media (max-width: 992px) {
+	.dropdowns {
+		max-width: 56px;
+		&__menu {
+			min-width: 56px;
+			max-width: 56px;
+			&> a {
+				padding: 0 15px;
+			}	
+		}
+	}
+}

@@ -1,0 +1,27 @@
+/* 
+ * UI Input group
+ *
+ * Use this module to create input-groups
+ * it is basically two elements next to each other
+ */
+
+.input-group {
+	display: table;
+	border-collapse: separate;
+	width: 100%;
+
+	&-input {
+		display: table-cell;
+		width: 100%;
+		float: left;
+	}
+
+	&-btn-wrap {
+		display: table-cell;
+		width: 1%;
+		vertical-align: top;
+	    position: relative;
+	    top: -4px;
+	    padding-left: @layout-xl;
+	}
+}

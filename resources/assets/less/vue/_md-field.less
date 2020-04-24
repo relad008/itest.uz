@@ -1,0 +1,77 @@
+.md-field {
+	position: relative;
+	margin-bottom: 25px; 
+
+	& .md-input {
+		width: 100%;
+		border-bottom: 1px solid @color-gray;
+		padding: 8px 0;
+		line-height: 1.25;
+		.radius(0);
+		font-family: @base-font-family;
+		// -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+		color: @base-font-color;
+		.transition(border .2s ease);
+		font-size: 14px;
+	
+		.placeholder({color: @color-black;});
+	}
+
+	& label {
+		color: @base-font-color;
+	    font-size: 14px;
+	    position: absolute;
+	    pointer-events: none;
+	    left: 0px;
+	    top: 10px;
+	    .transition(all .3s cubic-bezier(.25,.8,.25,1));
+	}
+
+	&.md-has-textarea:before {
+		bottom: 6px;
+	}
+
+	& .md-textarea {
+		min-height: 120px;
+	}
+
+	&.md-has-password {
+		& .md-icon-button {
+			display: none;
+		}
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 1px;
+		opacity: 0;
+		.scaleX(0.12);
+		.transition(all .2s ease);
+		background-color: @color-brand;
+	}
+
+	&.md-focused {
+
+		&:before {
+			opacity: 1;
+			.scaleX(1);
+		}
+
+		& label {
+			top: -12px;
+			font-size: 13px;
+		}
+	}
+
+	&.md-has-value {
+
+		& label {
+			top: -12px;
+			font-size: 13px;
+		}
+	}
+}

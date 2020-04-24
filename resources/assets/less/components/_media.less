@@ -1,0 +1,68 @@
+/*
+ * Media
+ *
+ * Define media component to use in
+ * comments, tweets, reviews e.t.c.
+ *
+ * - Template:
+ *
+ *	<div class="media">
+ *		<div class="thumb media__thumb"></div>
+ *
+ *		<div class="media__content">
+ *			<div class="media__title">
+ *				This is a media title
+ *			</div>
+ *
+ *			<div class="media__text">
+ *				...
+ *			</div>
+ *		</div>
+ *	</div> 
+ */
+
+.media{
+	padding: 15px 0;
+	margin-bottom: 15px;
+
+	/* Some modifiers */
+	&--left{
+		.media__thumb{
+			float: left;
+			margin-right: 15px;
+		}
+	}
+
+	&--right{
+		.media__thumb{
+			float: right;
+			margin-left: 15px;
+		}
+
+		.media__content{
+			text-align: right;
+		}
+	}
+
+	/* 
+	 * Use 'components/_thumb' as 
+	 * a base when creating thumb
+	 */
+
+	&__thumb{
+		/* ... */
+	}
+
+	&__content{
+		overflow: hidden;
+	}
+
+	&__title{	
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		/* ... */
+	}
+}
